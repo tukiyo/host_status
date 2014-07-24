@@ -1,0 +1,12 @@
+# /etc/systemd/system/host_status.service sample
+
+[Unit]
+Description=host_status
+After=docker.service
+Requires=docker.service
+
+[Service]
+ExecStart=/opt/host_status/host_status
+
+[Install]
+WantedBy=multi-user.target
